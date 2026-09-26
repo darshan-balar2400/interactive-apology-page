@@ -1,467 +1,3018 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I'm Really Sorry ❤️</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
 
-        body {
-            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #ff69b4, #ff1493, #ff69b4, #e73c7e);
-            background-size: 400% 400%;
-            animation: gradientShift 8s ease infinite;
-            overflow: hidden;
-            position: relative;
-        }
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+>
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+<meta name="theme-color" content="#0d0b14">
 
-        .bg-heart {
-            position: fixed;
-            font-size: 2em;
-            opacity: 0.15;
-            animation: floatAround 15s ease-in-out infinite;
-            pointer-events: none;
-            color: #fff;
-        }
+<meta
+  name="description"
+  content="Something I wanted to say to Aastha — properly."
+>
 
-        @keyframes floatAround {
-            0%, 100% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-            25% {
-                transform: translate(100px, -100px) rotate(90deg);
-            }
-            50% {
-                transform: translate(200px, 50px) rotate(180deg);
-            }
-            75% {
-                transform: translate(-50px, -50px) rotate(270deg);
-            }
-        }
+<title>For Aastha</title>
 
-        .container {
-            text-align: center;
-            padding: 50px 40px;
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: 35px;
-            box-shadow: 0 25px 70px rgba(255, 105, 180, 0.5);
-            max-width: 650px;
-            width: 90%;
-            animation: floatIn 1s ease-out;
-            border: 3px solid rgba(255, 105, 180, 0.3);
-            position: relative;
-            z-index: 10;
-        }
+<link
+  rel="icon"
+  href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%230d0b14' width='32' height='32' rx='8'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='%23ff9fc3' font-size='16' font-family='Georgia,serif'%3EA%3C/text%3E%3C/svg%3E"
+>
 
-        @keyframes floatIn {
-            from {
-                opacity: 0;
-                transform: translateY(-50px) scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        #mainText {
-            font-size: 2.8em;
-            color: #e73c7e;
-            margin-bottom: 50px;
-            font-weight: bold;
-            text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.3);
-            animation: pulse 2s ease-in-out infinite;
-            line-height: 1.5;
-        }
+<link
+  href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+  rel="stylesheet"
+>
 
-        @media (max-width: 768px) {
-            #mainText {
-                font-size: 2em;
-            }
-        }
+<style>
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-        }
+/* =========================================
+   RESET
+========================================= */
 
-        .buttons {
-            display: flex;
-            gap: 25px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-            min-height: 200px;
-            align-items: center;
-            position: relative;
-            padding: 20px;
-        }
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
 
-        @media (max-width: 768px) {
-            .buttons {
-                min-height: 350px;
-                flex-direction: column;
-            }
-        }
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-        button {
-            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-            font-size: 1.4em;
-            padding: 20px 40px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #0d0b14;
+  color: #f8f5f2;
+}
 
-        @media (max-width: 768px) {
-            button {
-                font-size: 1.2em;
-                padding: 16px 30px;
-            }
-        }
 
-        #yesBtn {
-            background: linear-gradient(135deg, #ff69b4, #ff1493);
-            color: white;
-            position: relative;
-            z-index: 5;
-        }
+/* =========================================
+   PAGE
+========================================= */
 
-        #yesBtn:hover {
-            transform: translateY(-8px) scale(1.1);
-            box-shadow: 0 15px 40px rgba(255, 20, 147, 0.5);
-        }
+.page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+}
 
-        #noBtn {
-            background: linear-gradient(135deg, #ffb6c1, #ff69b4);
-            color: #fff;
-            position: absolute;
-            transition: all 0.15s ease-out;
-            z-index: 10;
-        }
 
-        #noBtn:hover {
-            transform: scale(1.05);
-        }
+/* =========================================
+   FILM GRAIN
+========================================= */
 
-        button:active {
-            transform: translateY(-2px) scale(1.02);
-        }
+.page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .04;
+  pointer-events: none;
+  z-index: 4;
 
-        #emojiContainer {
-            font-size: 3.5em;
-            margin-top: 30px;
-            animation: bounce 1s ease infinite;
-            letter-spacing: 10px;
-        }
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 
-        @media (max-width: 768px) {
-            #emojiContainer {
-                font-size: 2.5em;
-                letter-spacing: 5px;
-            }
-        }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-25px); }
-        }
+/* =========================================
+   BACKGROUND
+========================================= */
 
-        .hidden {
-            display: none;
-        }
+.bg-parallax {
+  position: absolute;
+  inset: -30px;
+  will-change: transform;
+  transition: transform .15s ease-out;
+}
 
-        .heart {
-            position: fixed;
-            font-size: 2.5em;
-            animation: floatUp 4s ease-in-out;
-            pointer-events: none;
-            z-index: 1000;
-        }
+.glow {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: .22;
+  pointer-events: none;
 
-        @keyframes floatUp {
-            0% {
-                opacity: 1;
-                transform: translateY(0) rotate(0deg);
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-1000px) rotate(360deg);
-            }
-        }
+  animation: drift 20s ease-in-out infinite alternate;
 
-        .shake {
-            animation: shake 0.5s;
-        }
+  transition: background .8s ease;
+}
 
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-10px) rotate(-5deg); }
-            75% { transform: translateX(10px) rotate(5deg); }
-        }
+.g1 {
+  background: #ff8fb8;
+  top: -90px;
+  right: -100px;
 
-        #clickCount {
-            margin-top: 20px;
-            font-size: 1.1em;
-            color: #e73c7e;
-            font-weight: bold;
-            min-height: 30px;
-        }
+  animation-duration: 22s;
+}
 
-        @media (max-width: 768px) {
-            #clickCount {
-                font-size: 1em;
-            }
-        }
+.g2 {
+  background: #d98cff;
+  bottom: -100px;
+  left: -110px;
 
-        .sparkle {
-            position: fixed;
-            width: 10px;
-            height: 10px;
-            background: white;
-            border-radius: 50%;
-            pointer-events: none;
-            animation: sparkleAnim 1s ease-out forwards;
-            z-index: 999;
-        }
+  animation-delay: -6s;
+  animation-duration: 26s;
+}
 
-        @keyframes sparkleAnim {
-            0% {
-                opacity: 1;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: scale(0);
-            }
-        }
-    </style>
+@keyframes drift {
+
+  0% {
+    transform: translate(0,0) scale(1);
+  }
+
+  100% {
+    transform: translate(24px,18px) scale(1.06);
+  }
+
+}
+
+
+/* =========================================
+   STARS
+========================================= */
+
+.stars {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  opacity: 0;
+
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(.5);
+  }
+
+  50% {
+    opacity: .65;
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================
+   READING BAR
+========================================= */
+
+.read-bar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 3px;
+
+  background: rgba(255,255,255,.06);
+
+  z-index: 12;
+
+  opacity: 0;
+
+  transition: opacity .5s;
+}
+
+.read-bar.visible {
+  opacity: 1;
+}
+
+.read-bar span {
+  display: block;
+
+  height: 100%;
+  width: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff8fb8,
+      #d98cff,
+      #ffe1ec
+    );
+
+  transition:
+    width .55s cubic-bezier(.2,.8,.2,1);
+
+  box-shadow:
+    0 0 14px rgba(255,143,184,.45);
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 28px 20px;
+
+  padding-top:
+    max(28px, env(safe-area-inset-top));
+
+  padding-bottom:
+    max(72px, calc(28px + env(safe-area-inset-bottom)));
+}
+
+.card {
+  width: min(100%, 440px);
+
+  text-align: center;
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+.kicker {
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  color: #c8aab8;
+
+  margin-bottom: 24px;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", serif;
+
+  font-weight: 500;
+
+  line-height: 1.12;
+
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(42px, 13vw, 62px);
+}
+
+h2 {
+  font-size: clamp(34px, 10vw, 48px);
+}
+
+p {
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  color: #d8d0d6;
+
+  margin: 22px auto 0;
+
+  max-width: 360px;
+}
+
+
+/* =========================================
+   ACCENT
+========================================= */
+
+.accent {
+  display: inline-block;
+
+  background:
+    linear-gradient(
+      120deg,
+      #ff9fc3,
+      #ffe1ec 45%,
+      #ff9fc3
+    );
+
+  background-size: 200% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation: shimmer 7s ease-in-out infinite;
+
+  cursor: pointer;
+}
+
+@keyframes shimmer {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+}
+
+.strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.quote {
+  font-family: "Playfair Display", serif;
+
+  font-size: 25px;
+
+  line-height: 1.45;
+
+  color: #f5eaf0;
+
+  margin: 25px auto;
+
+  max-width: 350px;
+}
+
+.small {
+  font-size: 14px;
+
+  color: #aaa2b1;
+
+  line-height: 1.6;
+}
+
+.sign-off {
+  margin-top: 32px;
+
+  font-family: "Caveat", cursive;
+
+  font-size: 34px;
+
+  color: #e0cbd5;
+
+  font-weight: 600;
+
+  letter-spacing: .5px;
+}
+
+.emoji-big {
+  font-size: 48px;
+
+  line-height: 1;
+
+  margin: 8px auto 20px;
+
+  display: block;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+  margin-top: 35px;
+
+  border:
+    1px solid rgba(255,255,255,.16);
+
+  background:
+    rgba(255,255,255,.08);
+
+  color: #fff;
+
+  border-radius: 999px;
+
+  padding: 15px 25px;
+
+  font:
+    600 14px "DM Sans";
+
+  letter-spacing: .3px;
+
+  min-width: 150px;
+
+  backdrop-filter: blur(12px);
+
+  cursor: pointer;
+
+  transition:
+    border-color .25s,
+    background .25s,
+    transform .2s;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      105deg,
+      transparent 42%,
+      rgba(255,255,255,.14) 50%,
+      transparent 58%
+    );
+
+  transform: translateX(-130%);
+}
+
+.btn:hover::after {
+  animation: btnShine .85s ease;
+}
+
+@keyframes btnShine {
+
+  to {
+    transform: translateX(130%);
+  }
+
+}
+
+.btn:hover {
+  border-color:
+    rgba(255,143,184,.35);
+
+  background:
+    rgba(255,143,184,.10);
+}
+
+.btn:active {
+  transform: scale(.95);
+
+  background:
+    rgba(255,143,184,.14);
+}
+
+
+/* =========================================
+   NAV FOOTER
+========================================= */
+
+.nav-footer {
+  position: absolute;
+
+  bottom:
+    max(22px, env(safe-area-inset-bottom));
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+
+  transition:
+    opacity .35s,
+    transform .35s;
+}
+
+.nav-footer.hidden {
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform:
+    translateX(-50%)
+    translateY(8px);
+}
+
+.progress {
+  font-size: 11px;
+
+  letter-spacing: 2.5px;
+
+  text-transform: uppercase;
+
+  color: #756570;
+}
+
+.dots {
+  display: flex;
+
+  gap: 7px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #5d5764;
+
+  transition:
+    .35s cubic-bezier(.2,.8,.2,1);
+}
+
+.dot.active {
+  width: 19px;
+
+  border-radius: 8px;
+
+  background: #ffb6ce;
+
+  box-shadow:
+    0 0 8px rgba(255,182,206,.25);
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-btn {
+  position: fixed;
+
+  top:
+    max(18px, env(safe-area-inset-top));
+
+  left: 18px;
+
+  z-index: 13;
+
+  border:
+    1px solid rgba(255,255,255,.10);
+
+  background:
+    rgba(255,255,255,.06);
+
+  color: #cfc7d0;
+
+  border-radius: 999px;
+
+  padding: 9px 14px;
+
+  font:
+    500 13px "DM Sans", sans-serif;
+
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform: translateY(-6px);
+
+  transition:
+    opacity .3s,
+    transform .3s,
+    background .25s;
+}
+
+.back-btn.visible {
+  opacity: 1;
+
+  pointer-events: auto;
+
+  transform: translateY(0);
+}
+
+.back-btn:hover {
+  background:
+    rgba(255,255,255,.10);
+}
+
+.back-btn:active {
+  transform: scale(.95);
+}
+
+
+/* =========================================
+   SCREENS
+========================================= */
+
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+
+  animation:
+    screenIn .5s
+    cubic-bezier(.2,.8,.2,1);
+}
+
+.screen.active[data-dir="fwd"] {
+  animation:
+    screenFwd .55s
+    cubic-bezier(.2,.8,.2,1);
+}
+
+.screen.active[data-dir="back"] {
+  animation:
+    screenBack .55s
+    cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes screenIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+@keyframes screenFwd {
+
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+@keyframes screenBack {
+
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+
+/* =========================================
+   STAGGER
+========================================= */
+
+.stagger > * {
+  opacity: 0;
+
+  transform: translateY(16px);
+}
+
+.stagger.run > * {
+  animation:
+    lineIn .7s
+    cubic-bezier(.2,.8,.2,1)
+    forwards;
+}
+
+.stagger.run > *:nth-child(1) {
+  animation-delay: .06s;
+}
+
+.stagger.run > *:nth-child(2) {
+  animation-delay: .14s;
+}
+
+.stagger.run > *:nth-child(3) {
+  animation-delay: .22s;
+}
+
+.stagger.run > *:nth-child(4) {
+  animation-delay: .30s;
+}
+
+.stagger.run > *:nth-child(5) {
+  animation-delay: .38s;
+}
+
+.stagger.run > *:nth-child(6) {
+  animation-delay: .46s;
+}
+
+.stagger.run > *:nth-child(7) {
+  animation-delay: .54s;
+}
+
+.stagger.run > *:nth-child(8) {
+  animation-delay: .62s;
+}
+
+.stagger.run > *:nth-child(9) {
+  animation-delay: .70s;
+}
+
+@keyframes lineIn {
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+
+}
+
+
+/* =========================================
+   CHOICE
+========================================= */
+
+.choice-wrap {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 28px;
+}
+
+.choice {
+  width: 210px;
+
+  margin-top: 0;
+}
+
+.soft {
+  background: transparent;
+
+  border-color:
+    rgba(255,255,255,.08);
+
+  color: #aaa2b1;
+}
+
+.final-note {
+  margin-top: 17px;
+
+  font-size: 13px;
+
+  color: #918a99;
+}
+
+.hint {
+  font-size: 12px;
+
+  color: #665c63;
+
+  margin-top: 28px;
+
+  letter-spacing: .2px;
+}
+
+
+/* =========================================
+   TOAST
+========================================= */
+
+.toast {
+  position: fixed;
+
+  bottom:
+    max(
+      88px,
+      calc(72px + env(safe-area-inset-bottom))
+    );
+
+  left: 50%;
+
+  transform:
+    translateX(-50%)
+    translateY(16px);
+
+  opacity: 0;
+
+  background:
+    rgba(18,16,26,.94);
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
+  padding: 13px 20px;
+
+  border-radius: 14px;
+
+  font-size: 14px;
+
+  color: #e8e4ef;
+
+  z-index: 16;
+
+  transition:
+    opacity .35s,
+    transform .35s;
+
+  pointer-events: none;
+
+  max-width: min(90vw,320px);
+
+  text-align: center;
+
+  backdrop-filter: blur(10px);
+}
+
+.toast.show {
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+
+/* =========================================
+   ORBIT
+========================================= */
+
+.orbit {
+  position: absolute;
+
+  inset: -40px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(255,255,255,.04);
+
+  pointer-events: none;
+
+  animation:
+    orbitSpin 48s linear infinite;
+}
+
+.orbit::before {
+  content: "";
+
+  position: absolute;
+
+  top: -3px;
+
+  left: 50%;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #ffb8d0;
+
+  box-shadow:
+    0 0 12px #ffb8d0;
+
+  transform:
+    translateX(-50%);
+}
+
+@keyframes orbitSpin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+.confetti {
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+
+/* =========================================
+   FINAL STAMP
+========================================= */
+
+.stamp {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 80px;
+  height: 80px;
+
+  margin-bottom: 25px;
+
+  border:
+    1px solid rgba(255,159,195,.35);
+
+  border-radius: 50%;
+
+  color: #ffb4cd;
+
+  font-size: 10px;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+  transform: rotate(-8deg);
+
+  background:
+    rgba(255,143,184,.05);
+
+  box-shadow:
+    0 0 30px rgba(255,143,184,.08);
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .glow,
+  .star,
+  .accent,
+  .orbit {
+    animation: none;
+  }
+
+  .screen.active,
+  .screen.active[data-dir="fwd"],
+  .screen.active[data-dir="back"],
+  .stagger.run > * {
+    animation: none !important;
+  }
+
+  .stagger > * {
+    opacity: 1;
+
+    transform: none;
+  }
+
+  .bg-parallax {
+    transition: none;
+  }
+
+}
+
+</style>
 </head>
-<body>
-    <!-- Background floating hearts -->
-    <div class="bg-heart" style="top: 10%; left: 10%; animation-delay: 0s;">❤️</div>
-    <div class="bg-heart" style="top: 70%; left: 80%; animation-delay: 2s;">💖</div>
-    <div class="bg-heart" style="top: 30%; left: 85%; animation-delay: 4s;">💕</div>
-    <div class="bg-heart" style="top: 60%; left: 15%; animation-delay: 6s;">💗</div>
-    <div class="bg-heart" style="top: 20%; left: 50%; animation-delay: 8s;">💝</div>
 
-    <div class="container">
-        <div id="mainText">I'm really sorry ❤️<br>Please forgive me 🥺</div>
-        <div class="buttons">
-            <button id="yesBtn">Okay baby, I forgive you 💖</button>
-            <button id="noBtn">No, I'm still angry 😠</button>
+
+<body>
+
+
+<!-- =========================================
+     READING BAR
+========================================= -->
+
+<div
+  class="read-bar"
+  id="readBar"
+>
+
+  <span id="readFill"></span>
+
+</div>
+
+
+<div class="page">
+
+
+  <!-- =======================================
+       BACKGROUND
+  ======================================== -->
+
+  <div
+    class="bg-parallax"
+    id="bgParallax"
+  >
+
+    <div
+      class="glow g1"
+      id="glow1"
+    ></div>
+
+    <div
+      class="glow g2"
+      id="glow2"
+    ></div>
+
+    <div
+      class="stars"
+      id="stars"
+    ></div>
+
+  </div>
+
+
+  <!-- =======================================
+       MAIN
+  ======================================== -->
+
+  <main class="content">
+
+    <div class="card">
+
+
+      <!-- =====================================
+           SCREEN 1
+      ====================================== -->
+
+      <section
+        class="screen active"
+        data-dir="fwd"
+      >
+
+        <div class="stagger run">
+
+          <div class="kicker">
+            a little something
+          </div>
+
+          <h1>
+
+            Hey,<br>
+
+            <span
+              class="accent"
+              id="nameAccent"
+            >
+              Aastha.
+            </span>
+
+          </h1>
+
+          <p>
+
+            I made this because I felt a simple
+
+            <span class="strong">
+              “sorry”
+            </span>
+
+            wasn't enough.
+
+          </p>
+
+          <button
+            type="button"
+            class="btn next"
+          >
+            continue →
+          </button>
+
+          <p class="hint">
+            swipe left or use → to read
+          </p>
+
         </div>
-        <div id="clickCount"></div>
-        <div id="emojiContainer" class="hidden"></div>
+
+      </section>
+
+
+      <!-- =====================================
+           SCREEN 2 - NAME
+      ====================================== -->
+
+      <section class="screen">
+
+        <div class="stagger">
+
+          <div class="kicker">
+            hold on
+          </div>
+
+          <span
+            class="emoji-big"
+            aria-hidden="true"
+          >
+            🤔
+          </span>
+
+          <h2>
+            Wait one second...
+          </h2>
+
+          <p>
+
+            Is this the right spelling —
+
+            <span class="strong">
+              Aastha
+            </span>?
+
+            <br>
+
+            <span class="small">
+              (not Astha, not Asstha… double “aa”)
+            </span>
+
+          </p>
+
+          <div class="choice-wrap">
+
+            <button
+              type="button"
+              class="btn choice"
+              id="rightName"
+            >
+              Yep, that's me →
+            </button>
+
+            <button
+              type="button"
+              class="btn choice soft"
+              id="wrongName"
+            >
+              You're wrong 😭
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           WRONG NAME BRANCH
+      ====================================== -->
+
+      <section
+        class="screen"
+        id="wrongNameScreen"
+      >
+
+        <div class="stagger">
+
+          <div class="kicker">
+            oh god...
+          </div>
+
+          <span
+            class="emoji-big"
+            aria-hidden="true"
+          >
+            😭
+          </span>
+
+          <h2>
+            Oh god, sorry.
+          </h2>
+
+          <p>
+            Okay, okay…
+            <span class="strong">
+              my bad.
+            </span>
+          </p>
+
+          <p>
+
+            You can tell me your right name later.
+
+            <br>
+
+            <span class="small">
+              For now, let's continue. 😭
+            </span>
+
+          </p>
+
+          <button
+            type="button"
+            class="btn"
+            id="continueWrong"
+          >
+            okay, let's continue →
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           SCREEN 3
+      ====================================== -->
+
+      <section class="screen">
+
+        <div class="stagger">
+
+          <div class="kicker">
+            okay good
+          </div>
+
+          <span
+            class="emoji-big"
+            aria-hidden="true"
+          >
+            😮‍💨
+          </span>
+
+          <h2>
+            Uff… thank god.
+          </h2>
+
+          <p>
+
+            I got it right.
+
+            For a second there I was
+            <span class="strong">
+              really
+            </span>
+            worried I'd mess up your name on
+            the first slide.
+
+          </p>
+
+          <button
+            type="button"
+            class="btn next"
+          >
+            okay, continue →
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           SCREEN 4
+      ====================================== -->
+
+      <section class="screen">
+
+        <div class="stagger">
+
+          <div class="kicker">
+            here goes
+          </div>
+
+          <h2>
+            I know…
+          </h2>
+
+          <p>
+            we haven't known each other
+            for very long.
+          </p>
+
+          <p>
+            But I really value the
+            conversations we've had.
+          </p>
+
+          <button
+            type="button"
+            class="btn next"
+          >
+            keep reading →
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           SCREEN 5
+      ====================================== -->
+
+      <section class="screen">
+
+        <div class="stagger">
+
+          <div class="kicker">
+            about that moment
+          </div>
+
+          <p class="quote">
+            “I shouldn't share this with you.”
+          </p>
+
+          <p>
+
+            I didn't mean
+
+            <span class="strong">
+              I don't trust you.
+            </span>
+
+          </p>
+
+          <p>
+            I think I was just being scared for no reason.
+            
+
+          </p>
+          <p>I didn't want you to hear something heavy and then sit there wondering how to make me feel better.</p>
+          <p>Because honestly…
+
+            I didn't want you to feel sad just because I was. <br/>
+            
+            That was really all it was..</p>
+
+          <button
+            type="button"
+            class="btn next"
+          >
+            one more →
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           SCREEN 6
+      ====================================== -->
+
+      <section class="screen">
+
+        <div class="stagger">
+
+          <div class="kicker">
+            what I realised
+          </div>
+
+          <p>
+            You were listening.
+          </p>
+
+          <p>
+            You were trying to understand me.
+          </p>
+
+          <p>
+            You were just trying to help.
+          </p>
+
+          <p>
+
+            And somehow, I made you feel like
+            you couldn't be trusted.
+
+          </p>
+
+          <button
+            type="button"
+            class="btn next"
+          >
+            I'm sorry →
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           SCREEN 7
+      ====================================== -->
+
+      <section class="screen">
+
+        <div class="stagger">
+
+          <div class="kicker">
+            honestly
+          </div>
+
+          <p class="quote">
+
+            Nobody in this world deserves
+            to be hurt because of someone
+            else's words.
+
+          </p>
+
+          <p>
+            And I think I hurt you.
+          </p>
+
+          <p class="strong">
+            I'm genuinely sorry.
+          </p>
+
+          <button
+            type="button"
+            class="btn next"
+          >
+            last thing →
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           SCREEN 8
+      ====================================== -->
+
+      <section
+        class="screen"
+        data-choice
+      >
+
+        <div class="stagger">
+
+          <div class="kicker">
+            no pressure
+          </div>
+
+          <h2>
+            Can we leave this behind?
+          </h2>
+
+          <p>
+            And maybe...
+          </p>
+
+          <p class="quote">
+            Can we be good friends from now?
+          </p>
+
+          <div class="choice-wrap">
+
+            <button
+              type="button"
+              class="btn choice"
+              id="yes"
+            >
+              Yeah, we can :)
+            </button>
+
+            <button
+              type="button"
+              class="btn choice soft"
+              id="time"
+            >
+              I need some time
+            </button>
+
+          </div>
+
+          <div class="final-note">
+            Whatever you choose,
+            I'll respect it.
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =====================================
+           FINAL SCREEN
+      ====================================== -->
+
+      <section
+        class="screen"
+        id="thanks"
+      >
+
+        <div class="stagger">
+
+          <div
+            class="stamp"
+            aria-hidden="true"
+          >
+            sent<br>
+            with<br>
+            care
+          </div>
+
+          <h2 id="thanks-title">
+            Thank you.
+          </h2>
+
+          <p id="thanks-lead">
+            That's all I wanted to say.
+          </p>
+
+          <p
+            class="small"
+            id="thanks-note"
+          >
+            And I'll try to be a little better
+            at saying things before my
+            overthinking says them for me.
+          </p>
+
+          <p class="sign-off">
+            — Darshan
+          </p>
+
+        </div>
+
+      </section>
+
+
     </div>
 
-    <script>
-        const mainText = document.getElementById('mainText');
-        const yesBtn = document.getElementById('yesBtn');
-        const noBtn = document.getElementById('noBtn');
-        const emojiContainer = document.getElementById('emojiContainer');
-        const clickCount = document.getElementById('clickCount');
-        const buttonsContainer = document.querySelector('.buttons');
+  </main>
 
-        const sorryMessages = [
-            "I'm really sorry ❤️<br>Please forgive me 🥺",
-            "I promise I'll never do it again 😢💕",
-            "You mean the world to me 🌍💖",
-            "I can't stop thinking about how sorry I am 😭",
-            "Please give me another chance 🙏❤️",
-            "I'll do anything to make it up to you 💝",
-            "You're the most important person to me 🥰",
-            "I messed up, but I love you so much 💕😔",
-            "Life isn't the same without your smile 😢💖",
-            "I promise to be better for you 🌟❤️",
-            "Forgive me please? I'll buy you ice cream 🍦💕",
-            "I'm so so so sorry baby 😭❤️",
-            "You deserve the world and I'll give it to you 🌹💖",
-            "Pretty please with a cherry on top? 🍒🥺",
-            "I'll never let you down again, I promise 💍❤️"
+
+  <!-- =======================================
+       BACK BUTTON
+  ======================================== -->
+
+  <button
+    type="button"
+    class="back-btn"
+    id="backBtn"
+  >
+    ← back
+  </button>
+
+
+  <!-- =======================================
+       NAVIGATION
+  ======================================== -->
+
+  <div
+    class="nav-footer"
+    id="navFooter"
+  >
+
+    <div
+      class="progress"
+      id="progress"
+    >
+      1 / 8
+    </div>
+
+    <div
+      class="dots"
+      id="dots"
+    ></div>
+
+  </div>
+
+
+  <!-- =======================================
+       CONFETTI
+  ======================================== -->
+
+  <canvas
+    class="confetti"
+    id="confetti"
+  ></canvas>
+
+
+</div>
+
+
+<!-- =========================================
+     TOAST
+========================================= -->
+
+<div
+  class="toast"
+  id="toast"
+  role="status"
+  aria-live="polite"
+></div>
+
+
+<script>
+
+/* =========================================
+   ELEMENTS
+========================================= */
+
+const screens = [
+  ...document.querySelectorAll(".screen")
+];
+
+const dots =
+  document.getElementById("dots");
+
+const navFooter =
+  document.getElementById("navFooter");
+
+const progressEl =
+  document.getElementById("progress");
+
+const backBtn =
+  document.getElementById("backBtn");
+
+const readBar =
+  document.getElementById("readBar");
+
+const readFill =
+  document.getElementById("readFill");
+
+const glow1 =
+  document.getElementById("glow1");
+
+const glow2 =
+  document.getElementById("glow2");
+
+const bgParallax =
+  document.getElementById("bgParallax");
+
+const toastEl =
+  document.getElementById("toast");
+
+const thanksIndex =
+  screens.length - 1;
+
+const wrongNameIndex =
+  screens.indexOf(
+    document.getElementById("wrongNameScreen")
+  );
+
+
+/*
+  These are the actual 8 story pages.
+
+  Index:
+  0 = intro
+  1 = name
+  3 = uff
+  4 = conversations
+  5 = about moment
+  6 = realised
+  7 = honestly
+  8 = final choice
+*/
+
+const storyScreens = [
+  0,
+  1,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+];
+
+const storySteps =
+  storyScreens.length;
+
+
+/* =========================================
+   STATE
+========================================= */
+
+let current = 0;
+
+let noteOpened = true;
+
+
+/*
+  Tracks whether the user entered the
+  wrong-name branch.
+
+  This allows the Back button to behave
+  properly.
+*/
+
+let usedWrongNameBranch = false;
+
+
+/* =========================================
+   PINK MOODS
+========================================= */
+
+const moods = [
+
+  {
+    g1: "#ff8fb8",
+    g2: "#d98cff"
+  },
+
+  {
+    g1: "#ff9fbd",
+    g2: "#c994ff"
+  },
+
+  {
+    g1: "#ffabc7",
+    g2: "#b995ff"
+  },
+
+  {
+    g1: "#ff91b5",
+    g2: "#d18cff"
+  },
+
+  {
+    g1: "#f98fac",
+    g2: "#c89aff"
+  },
+
+  {
+    g1: "#ff9dbd",
+    g2: "#b88fff"
+  },
+
+  {
+    g1: "#ff8fb8",
+    g2: "#d08cff"
+  },
+
+  {
+    g1: "#ffabc7",
+    g2: "#c494ff"
+  }
+
+];
+
+
+/* =========================================
+   CREATE DOTS
+========================================= */
+
+storyScreens.forEach((screenIndex, i) => {
+
+  const dot =
+    document.createElement("span");
+
+  dot.className =
+    "dot" +
+    (i === 0 ? " active" : "");
+
+  dot.setAttribute(
+    "role",
+    "presentation"
+  );
+
+  dot.dataset.storyIndex = i;
+
+  dots.appendChild(dot);
+
+});
+
+
+const dotEls =
+  [...dots.children];
+
+
+/* =========================================
+   FINAL COPY
+========================================= */
+
+const thanksCopy = {
+
+  yes: {
+
+    title:
+      "Thank you.",
+
+    lead:
+      "I'm really glad we can move forward.",
+
+    note:
+      "I'll try to be a little better at saying things before my overthinking says them for me. Friends? 🤝"
+
+  },
+
+  time: {
+
+    title:
+      "Thank you for reading.",
+
+    lead:
+      "I mean every word — and I'm sorry again.",
+
+    note:
+      "Take all the time you need. No pressure, no awkwardness from my side. Whenever you're ready, I'm here."
+
+  }
+
+};
+
+
+/* =========================================
+   FIND STORY POSITION
+========================================= */
+
+function getStoryPosition(screenIndex) {
+
+  return storyScreens.indexOf(screenIndex);
+
+}
+
+
+/* =========================================
+   STAGGER
+========================================= */
+
+function runStagger(screen) {
+
+  const box =
+    screen.querySelector(".stagger");
+
+  if (!box) {
+    return;
+  }
+
+  box.classList.remove("run");
+
+  void box.offsetWidth;
+
+  box.classList.add("run");
+
+}
+
+
+/* =========================================
+   MOOD
+========================================= */
+
+function setMood(storyPosition) {
+
+  const m =
+    moods[
+      Math.min(
+        storyPosition,
+        moods.length - 1
+      )
+    ];
+
+  glow1.style.background =
+    m.g1;
+
+  glow2.style.background =
+    m.g2;
+
+}
+
+
+/* =========================================
+   UPDATE BOTTOM UI
+========================================= */
+
+function updateChrome() {
+
+  const onThanks =
+    current === thanksIndex;
+
+  /*
+    Hide navigation on final page.
+  */
+
+  navFooter.classList.toggle(
+    "hidden",
+    onThanks
+  );
+
+
+  /*
+    Back button appears on every page
+    except first and final.
+  */
+
+  backBtn.classList.toggle(
+    "visible",
+    current > 0 && !onThanks
+  );
+
+
+  /*
+    Reading bar.
+  */
+
+  readBar.classList.toggle(
+    "visible",
+    noteOpened && !onThanks
+  );
+
+
+  if (onThanks) {
+
+    readFill.style.width =
+      "100%";
+
+    setTimeout(() => {
+
+      readBar.classList.remove(
+        "visible"
+      );
+
+    }, 800);
+
+    return;
+  }
+
+
+  /*
+    Find current page's position
+    in the actual 8-page story.
+  */
+
+  let storyPosition =
+    getStoryPosition(current);
+
+
+  /*
+    Wrong-name page belongs visually
+    to step 2.
+  */
+
+  if (current === wrongNameIndex) {
+
+    storyPosition = 1;
+
+  }
+
+
+  /*
+    Safety fallback.
+  */
+
+  if (storyPosition < 0) {
+
+    storyPosition = 0;
+
+  }
+
+
+  const displayNumber =
+    storyPosition + 1;
+
+
+  /*
+    Progress text.
+  */
+
+  progressEl.textContent =
+    displayNumber +
+    " / " +
+    storySteps;
+
+
+  /*
+    Reading progress.
+  */
+
+  readFill.style.width =
+    (
+      (displayNumber / storySteps)
+      * 100
+    ) + "%";
+
+
+  /*
+    Update dots.
+  */
+
+  dotEls.forEach((dot, index) => {
+
+    dot.classList.toggle(
+      "active",
+      index === storyPosition
+    );
+
+  });
+
+
+  /*
+    Update background mood.
+  */
+
+  setMood(storyPosition);
+
+}
+
+
+/* =========================================
+   SHOW SCREEN
+========================================= */
+
+function show(
+  index,
+  direction = "forward"
+) {
+
+  if (
+    index < 0 ||
+    index >= screens.length
+  ) {
+    return;
+  }
+
+
+  if (index === current) {
+    return;
+  }
+
+
+  /*
+    Remove current screen.
+  */
+
+  screens[current]
+    .classList.remove("active");
+
+  screens[current]
+    .removeAttribute("data-dir");
+
+
+  /*
+    Change current screen.
+  */
+
+  current = index;
+
+
+  /*
+    Set animation direction.
+  */
+
+  screens[current]
+    .setAttribute(
+      "data-dir",
+      direction === "forward"
+        ? "fwd"
+        : "back"
+    );
+
+
+  /*
+    Activate new screen.
+  */
+
+  screens[current]
+    .classList.add("active");
+
+
+  /*
+    Animate content.
+  */
+
+  runStagger(
+    screens[current]
+  );
+
+
+  /*
+    IMPORTANT:
+    Update dots + counter immediately.
+  */
+
+  updateChrome();
+
+}
+
+
+/* =========================================
+   NEXT
+========================================= */
+
+function next() {
+
+  /*
+    Don't navigate from final screen.
+  */
+
+  if (
+    current === thanksIndex
+  ) {
+    return;
+  }
+
+
+  /*
+    Find current page in the
+    main story sequence.
+  */
+
+  let position =
+    getStoryPosition(current);
+
+
+  /*
+    Wrong-name page is an alternate
+    branch from story position 2.
+
+    After continuing, skip the
+    "Uff… thank god" page.
+  */
+
+  if (
+    current === wrongNameIndex
+  ) {
+
+    usedWrongNameBranch = true;
+
+    show(
+      storyScreens[3],
+      "forward"
+    );
+
+    return;
+  }
+
+
+  /*
+    If current page isn't in the
+    story sequence, stop safely.
+  */
+
+  if (position === -1) {
+    return;
+  }
+
+
+  /*
+    Move to next story page.
+  */
+
+  if (
+    position < storyScreens.length - 1
+  ) {
+
+    show(
+      storyScreens[position + 1],
+      "forward"
+    );
+
+  }
+
+}
+
+
+/* =========================================
+   PREVIOUS
+========================================= */
+
+function prev() {
+
+  if (
+    current <= 0 ||
+    current === thanksIndex
+  ) {
+    return;
+  }
+
+
+  /*
+    If we're on the wrong-name page,
+    go back to name screen.
+  */
+
+  if (
+    current === wrongNameIndex
+  ) {
+
+    show(
+      storyScreens[0 + 1],
+      "back"
+    );
+
+    return;
+  }
+
+
+  const position =
+    getStoryPosition(current);
+
+
+  if (position <= 0) {
+    return;
+  }
+
+
+  /*
+    Special case:
+    If the user chose the wrong name and
+    continued, the previous page should
+    be the name screen rather than the
+    skipped "Uff" page.
+  */
+
+  if (
+    usedWrongNameBranch &&
+    current === storyScreens[3]
+  ) {
+
+    show(
+      storyScreens[1],
+      "back"
+    );
+
+    return;
+  }
+
+
+  /*
+    Normal previous navigation.
+  */
+
+  show(
+    storyScreens[position - 1],
+    "back"
+  );
+
+}
+
+
+/* =========================================
+   FINAL SCREEN
+========================================= */
+
+function openThanks(mode) {
+
+  const copy =
+    thanksCopy[mode];
+
+
+  document.getElementById(
+    "thanks-title"
+  ).textContent =
+    copy.title;
+
+
+  document.getElementById(
+    "thanks-lead"
+  ).textContent =
+    copy.lead;
+
+
+  document.getElementById(
+    "thanks-note"
+  ).textContent =
+    copy.note;
+
+
+  show(
+    thanksIndex,
+    "forward"
+  );
+
+}
+
+
+/* =========================================
+   TOAST
+========================================= */
+
+let toastTimer;
+
+function showToast(message) {
+
+  toastEl.textContent =
+    message;
+
+  toastEl.classList.add(
+    "show"
+  );
+
+  clearTimeout(
+    toastTimer
+  );
+
+  toastTimer =
+    setTimeout(() => {
+
+      toastEl.classList.remove(
+        "show"
+      );
+
+    }, 2800);
+
+}
+
+
+/* =========================================
+   NEXT BUTTONS
+========================================= */
+
+document
+  .querySelectorAll(".next")
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      next
+    );
+
+  });
+
+
+/* =========================================
+   NAME - CORRECT
+========================================= */
+
+document
+  .getElementById("rightName")
+  .addEventListener(
+    "click",
+    () => {
+
+      next();
+
+    }
+  );
+
+
+/* =========================================
+   NAME - WRONG
+========================================= */
+
+document
+  .getElementById("wrongName")
+  .addEventListener(
+    "click",
+    () => {
+
+      usedWrongNameBranch = true;
+
+      show(
+        wrongNameIndex,
+        "forward"
+      );
+
+    }
+  );
+
+
+/* =========================================
+   CONTINUE AFTER WRONG NAME
+========================================= */
+
+document
+  .getElementById("continueWrong")
+  .addEventListener(
+    "click",
+    () => {
+
+      /*
+        Skip the "Uff… thank god" screen.
+
+        Name screen is story position 2.
+        Uff screen is story position 3.
+        We jump directly to the next
+        meaningful screen.
+      */
+
+      show(
+        storyScreens[3],
+        "forward"
+      );
+
+    }
+  );
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+backBtn.addEventListener(
+  "click",
+  () => {
+
+    prev();
+
+  }
+);
+
+
+/* =========================================
+   YES
+========================================= */
+
+document
+  .getElementById("yes")
+  .addEventListener(
+    "click",
+    () => {
+
+      burst(120);
+
+      setTimeout(
+        () => {
+
+          openThanks("yes");
+
+        },
+        650
+      );
+
+    }
+  );
+
+
+/* =========================================
+   TIME
+========================================= */
+
+document
+  .getElementById("time")
+  .addEventListener(
+    "click",
+    () => {
+
+      openThanks("time");
+
+    }
+  );
+
+
+/* =========================================
+   BUTTON VIBRATION
+========================================= */
+
+document
+  .querySelectorAll(".btn")
+  .forEach(button => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        if (
+          navigator.vibrate
+        ) {
+
+          navigator.vibrate(8);
+
+        }
+
+      }
+    );
+
+  });
+
+
+/* =========================================
+   SECRET NAME TAP
+========================================= */
+
+let nameTaps = 0;
+
+document
+  .getElementById("nameAccent")
+  .addEventListener(
+    "click",
+    () => {
+
+      nameTaps++;
+
+
+      if (nameTaps === 3) {
+
+        showToast(
+          "Triple-checked the spelling. Promise."
+        );
+
+      }
+
+
+      if (nameTaps === 5) {
+
+        showToast(
+          "Okay fine — I asked Google too 😅"
+        );
+
+      }
+
+    }
+  );
+
+
+/* =========================================
+   SWIPE
+========================================= */
+
+let touchX = 0;
+let touchY = 0;
+
+
+document.addEventListener(
+  "touchstart",
+  event => {
+
+    if (
+      !event.changedTouches[0]
+    ) {
+      return;
+    }
+
+    touchX =
+      event.changedTouches[0].clientX;
+
+    touchY =
+      event.changedTouches[0].clientY;
+
+  },
+  {
+    passive: true
+  }
+);
+
+
+document.addEventListener(
+  "touchend",
+  event => {
+
+    /*
+      Don't swipe on final screen.
+    */
+
+    if (
+      current === thanksIndex ||
+      !noteOpened
+    ) {
+      return;
+    }
+
+
+    if (
+      !event.changedTouches[0]
+    ) {
+      return;
+    }
+
+
+    const dx =
+      event.changedTouches[0].clientX -
+      touchX;
+
+    const dy =
+      event.changedTouches[0].clientY -
+      touchY;
+
+
+    /*
+      Ignore small movements.
+    */
+
+    if (
+      Math.abs(dx) < 55 ||
+      Math.abs(dx) < Math.abs(dy)
+    ) {
+
+      return;
+
+    }
+
+
+    /*
+      Don't allow swipe-left on the
+      choice page to accidentally skip it.
+    */
+
+    if (
+      screens[current]
+        .hasAttribute("data-choice") &&
+      dx < 0
+    ) {
+
+      return;
+
+    }
+
+
+    if (dx < 0) {
+
+      next();
+
+    }
+    else {
+
+      prev();
+
+    }
+
+  },
+  {
+    passive: true
+  }
+);
+
+
+/* =========================================
+   KEYBOARD
+========================================= */
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if (
+      current === thanksIndex ||
+      !noteOpened
+    ) {
+      return;
+    }
+
+
+    if (
+      event.key === "ArrowRight" ||
+      event.key === "Enter"
+    ) {
+
+      event.preventDefault();
+
+      next();
+
+    }
+
+
+    if (
+      event.key === "ArrowLeft"
+    ) {
+
+      event.preventDefault();
+
+      prev();
+
+    }
+
+  }
+);
+
+
+/* =========================================
+   STARS
+========================================= */
+
+const stars =
+  document.getElementById("stars");
+
+
+for (
+  let i = 0;
+  i < 52;
+  i++
+) {
+
+  const star =
+    document.createElement("i");
+
+  star.className =
+    "star";
+
+
+  star.style.left =
+    Math.random() * 100 + "%";
+
+
+  star.style.top =
+    Math.random() * 100 + "%";
+
+
+  star.style.animationDelay =
+    Math.random() * 4 + "s";
+
+
+  star.style.animationDuration =
+    (2 + Math.random() * 3) + "s";
+
+
+  const size =
+    Math.random() < .2
+      ? 4
+      : 3;
+
+
+  star.style.width =
+    size + "px";
+
+
+  star.style.height =
+    size + "px";
+
+
+  stars.appendChild(
+    star
+  );
+
+}
+
+
+/* =========================================
+   PARALLAX
+========================================= */
+
+let px = 0;
+let py = 0;
+
+let tx = 0;
+let ty = 0;
+
+
+document.addEventListener(
+  "mousemove",
+  event => {
+
+    tx =
+      (
+        event.clientX /
+        innerWidth -
+        .5
+      ) * 22;
+
+
+    ty =
+      (
+        event.clientY /
+        innerHeight -
+        .5
+      ) * 16;
+
+  }
+);
+
+
+document.addEventListener(
+  "touchmove",
+  event => {
+
+    if (
+      !event.touches[0]
+    ) {
+      return;
+    }
+
+
+    tx =
+      (
+        event.touches[0].clientX /
+        innerWidth -
+        .5
+      ) * 18;
+
+
+    ty =
+      (
+        event.touches[0].clientY /
+        innerHeight -
+        .5
+      ) * 14;
+
+  },
+  {
+    passive: true
+  }
+);
+
+
+(function parallax() {
+
+  px +=
+    (tx - px) * .07;
+
+  py +=
+    (ty - py) * .07;
+
+
+  bgParallax.style.transform =
+    `translate(${px}px,${py}px)`;
+
+
+  requestAnimationFrame(
+    parallax
+  );
+
+})();
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+function burst(count = 90) {
+
+  const canvas =
+    document.getElementById(
+      "confetti"
+    );
+
+  const ctx =
+    canvas.getContext("2d");
+
+
+  canvas.width =
+    innerWidth;
+
+  canvas.height =
+    innerHeight;
+
+
+  const colors = [
+
+    "#ffffff",
+    "#ffb6cf",
+    "#ff8fb8",
+    "#e8c4ff"
+
+  ];
+
+
+  let pieces =
+    [...Array(count)].map(() => ({
+
+      x:
+        innerWidth / 2,
+
+      y:
+        innerHeight * .58,
+
+      vx:
+        (Math.random() - .5) * 9,
+
+      vy:
+        -Math.random() * 10 - 4,
+
+      r:
+        Math.random() * 4 + 2,
+
+      a:
+        1,
+
+      rot:
+        Math.random() * Math.PI
+
+    }));
+
+
+  function frame() {
+
+    ctx.clearRect(
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+
+
+    pieces.forEach(piece => {
+
+      piece.x +=
+        piece.vx;
+
+      piece.y +=
+        piece.vy;
+
+      piece.vy +=
+        .2;
+
+      piece.a -=
+        .011;
+
+      piece.rot +=
+        .08;
+
+
+      ctx.save();
+
+
+      ctx.globalAlpha =
+        piece.a;
+
+
+      ctx.translate(
+        piece.x,
+        piece.y
+      );
+
+
+      ctx.rotate(
+        piece.rot
+      );
+
+
+      ctx.fillStyle =
+        colors[
+          Math.floor(
+            Math.random()
+            * colors.length
+          )
         ];
 
-        let currentMessageIndex = 0;
-        let noClickCount = 0;
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-        function createSparkle(x, y) {
-            for (let i = 0; i < 5; i++) {
-                const sparkle = document.createElement('div');
-                sparkle.className = 'sparkle';
-                sparkle.style.left = x + (Math.random() - 0.5) * 50 + 'px';
-                sparkle.style.top = y + (Math.random() - 0.5) * 50 + 'px';
-                document.body.appendChild(sparkle);
-                setTimeout(() => sparkle.remove(), 1000);
-            }
-        }
+      ctx.fillRect(
+        -piece.r / 2,
+        -piece.r,
+        piece.r,
+        piece.r * 2
+      );
 
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.textContent = ['❤️', '💖', '💕', '💗', '💝', '🥰', '😍'][Math.floor(Math.random() * 7)];
-            heart.style.left = Math.random() * window.innerWidth + 'px';
-            heart.style.top = window.innerHeight + 'px';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 4000);
-        }
 
-        function moveNoButton() {
-            const rect = buttonsContainer.getBoundingClientRect();
-            const btnRect = noBtn.getBoundingClientRect();
-            const yesRect = yesBtn.getBoundingClientRect();
-            const maxX = rect.width - btnRect.width - 20;
-            const maxY = rect.height - btnRect.height - 20;
-            
-            let newX, newY;
-            let attempts = 0;
-            const maxAttempts = 50;
-            
-            // Keep trying until we find a position that doesn't overlap with Yes button
-            do {
-                newX = Math.random() * maxX + 10;
-                newY = Math.random() * maxY + 10;
-                attempts++;
-                
-                // Calculate if the new position would overlap with Yes button
-                const noLeft = rect.left + newX;
-                const noRight = noLeft + btnRect.width;
-                const noTop = rect.top + newY;
-                const noBottom = noTop + btnRect.height;
-                
-                const yesLeft = yesRect.left;
-                const yesRight = yesRect.right;
-                const yesTop = yesRect.top;
-                const yesBottom = yesRect.bottom;
-                
-                // Add padding to keep buttons well separated
-                const padding = 30;
-                
-                // Check if positions overlap
-                const overlaps = !(
-                    noRight + padding < yesLeft ||
-                    noLeft - padding > yesRight ||
-                    noBottom + padding < yesTop ||
-                    noTop - padding > yesBottom
-                );
-                
-                if (!overlaps || attempts >= maxAttempts) {
-                    break;
-                }
-            } while (true);
-            
-            noBtn.style.left = newX + 'px';
-            noBtn.style.top = newY + 'px';
-            
-            createSparkle(btnRect.left + btnRect.width/2, btnRect.top + btnRect.height/2);
-            
-            // Shrink the button each time it moves
-            noClickCount++;
-            const newScale = Math.max(0.3, 1 - (noClickCount * 0.1));
-            noBtn.style.transform = `scale(${newScale})`;
-        }
+      ctx.restore();
 
-        function initNoButton() {
-            const isMobileView = window.innerWidth <= 768;
-            noBtn.style.left = isMobileView ? '50%' : '70%';
-            noBtn.style.top = isMobileView ? '70%' : '50%';
-            noBtn.style.transform = 'translate(-50%, -50%) scale(1)';
-            noClickCount = 0;
-        }
+    });
 
-        initNoButton();
-        window.addEventListener('resize', initNoButton);
 
-        // Desktop only: Move on hover
-        if (!isMobile) {
-            noBtn.addEventListener('mouseenter', function() {
-                moveNoButton();
-                // Change message immediately
-                currentMessageIndex = (currentMessageIndex + 1) % sorryMessages.length;
-                mainText.innerHTML = sorryMessages[currentMessageIndex];
-                mainText.classList.add('shake');
-                setTimeout(() => mainText.classList.remove('shake'), 500);
-                
-                if (noClickCount <= 5) {
-                    clickCount.innerHTML = `Come on... just click YES! 🥺 (Attempts: ${noClickCount})`;
-                } else if (noClickCount <= 10) {
-                    clickCount.innerHTML = `Please baby! I'm begging you! 😭 (Attempts: ${noClickCount})`;
-                } else {
-                    clickCount.innerHTML = `I can do this all day! 💪❤️ (Attempts: ${noClickCount})`;
-                }
-                
-                createHeart();
-            });
-        }
+    pieces =
+      pieces.filter(
+        piece =>
+          piece.a > 0
+      );
 
-        // Mobile: Move on click and change message immediately
-        noBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            moveNoButton();
-            
-            // Change message immediately
-            currentMessageIndex = (currentMessageIndex + 1) % sorryMessages.length;
-            mainText.innerHTML = sorryMessages[currentMessageIndex];
-            
-            mainText.classList.add('shake');
-            setTimeout(() => mainText.classList.remove('shake'), 500);
 
-            if (noClickCount <= 5) {
-                clickCount.innerHTML = `Come on... just click YES! 🥺 (Attempts: ${noClickCount})`;
-            } else if (noClickCount <= 10) {
-                clickCount.innerHTML = `Please baby! I'm begging you! 😭 (Attempts: ${noClickCount})`;
-            } else {
-                clickCount.innerHTML = `I can do this all day! 💪❤️ (Attempts: ${noClickCount})`;
-            }
+    if (
+      pieces.length
+    ) {
 
-            createHeart();
-        });
+      requestAnimationFrame(
+        frame
+      );
 
-        // Handle Yes button click
-        yesBtn.addEventListener('click', function() {
-            mainText.innerHTML = "Yay! You forgave me! 😍💖🥳";
-            emojiContainer.innerHTML = "😊❤️💃🎉✨🥰💕🌟🎊💖🌹😘";
-            emojiContainer.classList.remove('hidden');
-            clickCount.innerHTML = "I LOVE YOU SO MUCH! ❤️❤️❤️";
-            buttonsContainer.style.display = 'none';
+    }
+    else {
 
-            for (let i = 0; i < 30; i++) {
-                setTimeout(() => createHeart(), i * 150);
-            }
+      ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
 
-            document.body.style.background = 'linear-gradient(-45deg, #ff69b4, #ff1493, #ff69b4, #ffc0cb, #ff69b4, #ff1493)';
-        });
+    }
 
-        // Make Yes button grow bigger as No attempts increase
-        setInterval(() => {
-            if (noClickCount > 3 && buttonsContainer.style.display !== 'none') {
-                yesBtn.style.transform = `translateY(-8px) scale(${1.1 + (noClickCount * 0.05)})`;
-            }
-        }, 100);
-    </script>
+  }
+
+
+  frame();
+
+}
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+setMood(0);
+
+runStagger(
+  screens[0]
+);
+
+updateChrome();
+
+</script>
+
 </body>
 </html>
